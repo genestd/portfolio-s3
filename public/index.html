@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio DGenest</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pontano+Sans">
+    <link href="styles/entypo/css/entypo.css?family=entypo" rel="stylesheet">
+    <script type='text/javascript' src='js/map.js'></script>
+    <style>
+     .frontpage{
+       background-image: url(icons/pattern4.svg);
+       background-repeat: no-repeat;
+       background-attachment: fixed ;
+       background-size: cover;
+       background-position: top left;
+     }
+     /* #fixation{
+       background: url(icons/fixation_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #stockwatch{
+       background: url(icons/stockwatch_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #bookshelf{
+       background: url(icons/bookshelf_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #rogue{
+       background: url(icons/roguelike_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #dataviz{
+       background: url(icons/dataviz_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #gol{
+       background: url(icons/gol.png) no-repeat;
+       background-size: 100%;
+     }
+     #nflviz{
+       background: url(icons/nflviz_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #weather{
+       background: url(icons/weather_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #api{
+       background: url(icons/api_static.png) no-repeat;
+       background-size: 100%;
+     }
+     #simon{
+       background: url(icons/simon_static.png) no-repeat;
+       background-size: 100%;
+     } */
+    </style>
+  </head>
+
+  <body id='body'>
+    <div id="root" class="app"></div>
+  </body>
+  <script type="text/javascript">
+    function downloadJSAtOnload() {
+      var element2 = document.createElement("script");
+      element2.src = "js/index.js"
+      document.body.appendChild(element2)
+      var element = document.createElement("script");
+      element.async = true
+      element.defer = true
+      element.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pZMGgwpwUhZs313dMZ_L9u9ZfW3TBaU&callback=createMap";
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+  </script>
+  </html>
